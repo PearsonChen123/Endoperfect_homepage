@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EndoPerfect: A Hybrid NeRF-Stereo Vision Approach</title>
     <style>
-        /* Previous styles remain the same */
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             line-height: 1.6;
@@ -20,72 +19,68 @@
             padding: 2rem;
         }
 
-        .header {
-            text-align: center;
-            padding: 3rem 0;
-        }
-
         .title {
             font-size: 2.5rem;
             margin-bottom: 1rem;
             line-height: 1.3;
+            text-align: center;
         }
 
-        .authors {
+        .authors-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 2rem;
-            max-width: 1000px;
-            margin: 2rem auto;
+            gap: 20px;
+            margin: 40px 0;
             text-align: center;
         }
 
         .author {
-            margin-bottom: 1rem;
+            margin-bottom: 20px;
         }
 
         .author-name {
             font-weight: bold;
-            margin-bottom: 0.5rem;
+            margin-bottom: 5px;
         }
 
-        .affiliation {
-            font-size: 0.9rem;
-            margin-bottom: 0.5rem;
+        .institution {
+            font-size: 0.9em;
+            color: #666;
+            margin-bottom: 5px;
         }
 
         .department {
-            font-size: 0.9rem;
+            font-size: 0.85em;
             color: #666;
-            margin-bottom: 0.5rem;
+            margin-bottom: 5px;
         }
 
         .email {
-            font-size: 0.8rem;
+            font-size: 0.8em;
             color: #0366d6;
         }
 
-        /* New styles for buttons with icons */
-        .links {
-            margin: 2rem 0;
-            text-align: center;
+        .resource-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 30px 0;
+            flex-wrap: wrap;
         }
 
         .resource-button {
             display: inline-flex;
             align-items: center;
-            background-color: #24292e;
-            color: white;
             padding: 8px 16px;
-            margin: 0 8px;
-            border-radius: 6px;
+            background: #333;
+            color: white;
             text-decoration: none;
-            font-weight: 500;
-            transition: background-color 0.2s;
+            border-radius: 5px;
+            transition: transform 0.2s;
         }
 
         .resource-button:hover {
-            background-color: #2c3136;
+            transform: translateY(-2px);
         }
 
         .resource-button img {
@@ -94,19 +89,32 @@
             margin-right: 8px;
         }
 
+        .pipeline-container {
+            text-align: center;
+            margin: 40px 0;
+        }
+
         .main-image {
-            max-width: 100%;
-            height: auto;
-            margin: 2rem auto;
+            width: 100%;
+            max-width: 900px;
+            margin: 40px auto;
+            display: block;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
 
+        .pipeline-caption {
+            margin-top: 15px;
+            font-size: 0.9em;
+            color: #666;
+        }
+
         .abstract {
             background-color: #f6f8fa;
-            padding: 2rem;
-            border-radius: 8px;
-            margin: 2rem 0;
+            padding: 30px;
+            border-radius: 10px;
+            margin: 40px 0;
+            text-align: justify;
         }
 
         .abstract h2 {
@@ -116,29 +124,81 @@
 </head>
 <body>
     <div class="container">
-        <!-- Previous header and authors content remains the same -->
-        <div class="header">
-            <!-- ... previous title and authors ... -->
+        <h1 class="title">EndoPerfect: A Hybrid NeRF-Stereo Vision Approach Pioneering Monocular Depth Estimation and 3D Reconstruction in Endoscopy</h1>
+
+        <div class="authors-grid">
+            <div class="author">
+                <div class="author-name">Pengcheng Chen</div>
+                <div class="institution">University of Washington</div>
+                <div class="department">Mechanical Engineering</div>
+                <div class="email">pengcc@uw.edu</div>
+            </div>
+            <div class="author">
+                <div class="author-name">Wenhao Li</div>
+                <div class="institution">CUHKSZ, AIRS</div>
+                <div class="department">Computer Science and Engineering</div>
+                <div class="email">wenhaoli@link.cuhk.edu.cn</div>
+            </div>
+            <div class="author">
+                <div class="author-name">Nicole Gunderson</div>
+                <div class="institution">University of Washington</div>
+                <div class="department">Mechanical Engineering</div>
+                <div class="email">ngund@uw.edu</div>
+            </div>
+            <div class="author">
+                <div class="author-name">Jeremy Ruthberg</div>
+                <div class="institution">University of Washington</div>
+                <div class="department">Otolaryngology</div>
+                <div class="email">jruth@uw.edu</div>
+            </div>
+            <div class="author">
+                <div class="author-name">Randall Bly</div>
+                <div class="institution">University of Washington</div>
+                <div class="department">Otolaryngology</div>
+                <div class="email">randbly@uw.edu</div>
+            </div>
+            <div class="author">
+                <div class="author-name">Zhenglong Sun</div>
+                <div class="institution">CUHKSZ, AIRS</div>
+                <div class="department">Computer Science and Engineering</div>
+                <div class="email">wenhaoli@link.cuhk.edu.cn</div>
+            </div>
+            <div class="author">
+                <div class="author-name">Waleed M. Abuzeid</div>
+                <div class="institution">University of Washington</div>
+                <div class="department">Otolaryngology</div>
+                <div class="email">wabuzeid@uw.edu</div>
+            </div>
+            <div class="author">
+                <div class="author-name">Eric J. Seibel</div>
+                <div class="institution">University of Washington</div>
+                <div class="department">Mechanical Engineering</div>
+                <div class="email">eseibel@uw.edu</div>
+            </div>
         </div>
 
-        <div class="links">
+        <div class="resource-buttons">
             <a href="https://arxiv.org/abs/2410.04041" class="resource-button">
-                <img src="/api/placeholder/20/20" alt="pdf" /> Paper
+                <img src="assets/images/pdf.png" alt="PDF" /> Paper
             </a>
             <a href="https://github.com/PearsonChen123/EndoPerfect" class="resource-button">
-                <img src="/api/placeholder/20/20" alt="code" /> Code
+                <img src="assets/images/code.png" alt="Code" /> Code
             </a>
             <a href="#" class="resource-button">
-                <img src="/api/placeholder/20/20" alt="dataset" /> Dataset
+                <img src="assets/images/dataset.png" alt="Dataset" /> Dataset
             </a>
         </div>
 
-        <img src="/api/placeholder/800/400" alt="pipeline" class="main-image" />
+        <div class="pipeline-container">
+            <img src="assets/images/pipeline.png" alt="EndoPerfect Pipeline" class="main-image"/>
+            <div class="pipeline-caption">
+                Overview of the EndoPerfect pipeline: combining NeRF and stereo vision for accurate monocular depth estimation.
+            </div>
+        </div>
 
         <div class="abstract">
             <h2>Abstract</h2>
             <p>
-                <!-- Add your abstract text here -->
                 3D reconstruction in endoscopic sinus surgery (ESS) demands exceptional accuracy, with the mean error and standard deviation necessitating within the range of a single CT slice (0.625 mm), as the critical structures in the nasal cavity are situated within submillimeter distances from surgical instruments. This poses a formidable challenge when using conventional monocular endoscopes. Depth estimation is crucial for 3D reconstruction, yet existing depth estimation methodologies either suffer from inherent accuracy limitations or, in the case of learning-based approaches, perform poorly when applied to ESS despite succeeding on their original datasets. In this study, we present a novel, highly generalizable method that combines Neural Radiance Fields (NeRF) and stereo depth estimation for 3D reconstruction that can derive metric monocular depth. Our approach begins with an initial NeRF reconstruction yielding a coarse 3D scene, the subsequent creation of binocular pairs within coarse 3D scene, and generation of depth maps through stereo vision, These depth maps are used to supervise subsequent NeRF iteration, progressively refining NeRF and binocular depth, the refinement process continues until the depth maps converged. This recursive process generates high-accuracy depth maps from monocular endoscopic video. Evaluation in synthetic endoscopy shows a depth accuracy of 0.125 ± 0.443 mm, well within the 0.625 mm threshold. Further clinical experiments with real endoscopic data demonstrate a mean distance to CT mesh of 0.269 mm, representing the highest accuracy among monocular 3D reconstruction methods in ESS.
             </p>
         </div>
